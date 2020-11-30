@@ -1,0 +1,21 @@
+{{#each this}}
+
+<h2 class="card-title">{{name}}</h2>
+
+<div class="card">
+    <ul>
+        <li class="card-text">Capital: {{capital}}</li>
+        <li class="card-text">Population: {{population}}</li>
+        <li class="card-text"><b>Languages</b>
+            <ul class="language-list"></ul>
+            {{#each this.languages}}
+        <li class="language-list-item">{{name}}</li>
+        {{/each}}
+    </ul>
+
+    <div class="flag-img">
+        <img src={{"flag"}} alt="flag of {{name}}">
+    </div>
+</div>
+{{/each}}
+{{!-- src="https://restcountries.eu/data/{{languages.iso639_2}}.svg" --}}
